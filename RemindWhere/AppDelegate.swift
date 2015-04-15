@@ -17,6 +17,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //rgba(41, 128, 185,1.0)
+        
+        UITabBar.appearance().barTintColor = UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1)
+        UITabBar.appearance().tintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1)
+        
+        if (NSUserDefaults.standardUserDefaults().objectForKey("SendNotification") == nil) {
+            NSUserDefaults.standardUserDefaults().setValue(false, forKey: "SendNotification")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
+        if (NSUserDefaults.standardUserDefaults().objectForKey("AlertDistance") == nil) {
+            NSUserDefaults.standardUserDefaults().setValue(5.0, forKey: "AlertDistance")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
+        
         return true
     }
 
@@ -44,12 +61,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
 
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        
+    }
+    
+    
     // MARK: - Core Data stack
 
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.agsoares.RemindWhere" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1] as NSURL
+        return urls[urls.count-1] as! NSURL
     }()
 
     lazy var managedObjectModel: NSManagedObjectModel = {

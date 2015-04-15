@@ -7,13 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B909C6351AD5FDB1008682A2 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909C6341AD5FDB1008682A2 /* NoteTableViewCell.swift */; };
+		B994E1C21AD6E9D10018C744 /* UserConfigTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994E1C11AD6E9D10018C744 /* UserConfigTableViewController.swift */; };
 		B9BD98FD1AD460C500689710 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BD98FC1AD460C500689710 /* AppDelegate.swift */; };
 		B9BD99001AD460C500689710 /* RemindWhere.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9BD98FE1AD460C500689710 /* RemindWhere.xcdatamodeld */; };
-		B9BD99021AD460C500689710 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BD99011AD460C500689710 /* ViewController.swift */; };
 		B9BD99051AD460C500689710 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9BD99031AD460C500689710 /* Main.storyboard */; };
 		B9BD99071AD460C500689710 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9BD99061AD460C500689710 /* Images.xcassets */; };
 		B9BD990A1AD460C500689710 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9BD99081AD460C500689710 /* LaunchScreen.xib */; };
 		B9BD99161AD460C500689710 /* RemindWhereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BD99151AD460C500689710 /* RemindWhereTests.swift */; };
+		B9BD99221AD4639B00689710 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BD991F1AD4627A00689710 /* CoreLocation.framework */; };
+		B9BD99241AD4BA5300689710 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BD99231AD4BA5300689710 /* ListViewController.swift */; };
+		B9BD99261AD4BBE500689710 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BD99251AD4BBE500689710 /* MapViewController.swift */; };
+		B9BD99281AD4BCF200689710 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BD99271AD4BCF200689710 /* MapKit.framework */; };
+		B9BD992A1AD4C25E00689710 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BD99291AD4C25E00689710 /* Note.swift */; };
+		B9ECE80A1AD58F2800BB5EF3 /* NoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECE8091AD58F2800BB5EF3 /* NoteManager.swift */; };
+		B9ECE80E1AD5954000BB5EF3 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECE80D1AD5954000BB5EF3 /* NewNoteViewController.swift */; };
+		B9ECE8141AD5B93B00BB5EF3 /* MapPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECE8131AD5B93B00BB5EF3 /* MapPointViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +36,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B909C6341AD5FDB1008682A2 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		B994E1C11AD6E9D10018C744 /* UserConfigTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserConfigTableViewController.swift; sourceTree = "<group>"; };
 		B9BD98F71AD460C500689710 /* RemindWhere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindWhere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BD98FB1AD460C500689710 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9BD98FC1AD460C500689710 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9BD98FF1AD460C500689710 /* RemindWhere.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemindWhere.xcdatamodel; sourceTree = "<group>"; };
-		B9BD99011AD460C500689710 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B9BD99041AD460C500689710 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9BD99061AD460C500689710 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B9BD99091AD460C500689710 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B9BD990F1AD460C500689710 /* RemindWhereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemindWhereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BD99141AD460C500689710 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9BD99151AD460C500689710 /* RemindWhereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindWhereTests.swift; sourceTree = "<group>"; };
+		B9BD991F1AD4627A00689710 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B9BD99231AD4BA5300689710 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		B9BD99251AD4BBE500689710 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B9BD99271AD4BCF200689710 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B9BD99291AD4C25E00689710 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		B9ECE8091AD58F2800BB5EF3 /* NoteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteManager.swift; sourceTree = "<group>"; };
+		B9ECE80D1AD5954000BB5EF3 /* NewNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
+		B9ECE8131AD5B93B00BB5EF3 /* MapPointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPointViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9BD99281AD4BCF200689710 /* MapKit.framework in Frameworks */,
+				B9BD99221AD4639B00689710 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +81,7 @@
 		B9BD98EE1AD460C500689710 = {
 			isa = PBXGroup;
 			children = (
+				B9BD99211AD4628900689710 /* Frameworks */,
 				B9BD98F91AD460C500689710 /* RemindWhere */,
 				B9BD99121AD460C500689710 /* RemindWhereTests */,
 				B9BD98F81AD460C500689710 /* Products */,
@@ -79,12 +100,12 @@
 		B9BD98F91AD460C500689710 /* RemindWhere */ = {
 			isa = PBXGroup;
 			children = (
+				B9ECE8121AD5A57100BB5EF3 /* Helper */,
+				B9ECE8111AD5A56800BB5EF3 /* Controller */,
+				B9ECE8101AD5A56000BB5EF3 /* View */,
+				B9ECE80F1AD5A55900BB5EF3 /* Model */,
 				B9BD98FC1AD460C500689710 /* AppDelegate.swift */,
-				B9BD99011AD460C500689710 /* ViewController.swift */,
-				B9BD99031AD460C500689710 /* Main.storyboard */,
 				B9BD99061AD460C500689710 /* Images.xcassets */,
-				B9BD99081AD460C500689710 /* LaunchScreen.xib */,
-				B9BD98FE1AD460C500689710 /* RemindWhere.xcdatamodeld */,
 				B9BD98FA1AD460C500689710 /* Supporting Files */,
 			);
 			path = RemindWhere;
@@ -113,6 +134,54 @@
 				B9BD99141AD460C500689710 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B9BD99211AD4628900689710 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9BD99271AD4BCF200689710 /* MapKit.framework */,
+				B9BD991F1AD4627A00689710 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9ECE80F1AD5A55900BB5EF3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B9BD98FE1AD460C500689710 /* RemindWhere.xcdatamodeld */,
+				B9BD99291AD4C25E00689710 /* Note.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B9ECE8101AD5A56000BB5EF3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B9BD99081AD460C500689710 /* LaunchScreen.xib */,
+				B9BD99031AD460C500689710 /* Main.storyboard */,
+				B909C6341AD5FDB1008682A2 /* NoteTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B9ECE8111AD5A56800BB5EF3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B9BD99231AD4BA5300689710 /* ListViewController.swift */,
+				B9BD99251AD4BBE500689710 /* MapViewController.swift */,
+				B9ECE80D1AD5954000BB5EF3 /* NewNoteViewController.swift */,
+				B9ECE8131AD5B93B00BB5EF3 /* MapPointViewController.swift */,
+				B994E1C11AD6E9D10018C744 /* UserConfigTableViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B9ECE8121AD5A57100BB5EF3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B9ECE8091AD58F2800BB5EF3 /* NoteManager.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +284,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9BD99021AD460C500689710 /* ViewController.swift in Sources */,
+				B9ECE8141AD5B93B00BB5EF3 /* MapPointViewController.swift in Sources */,
+				B994E1C21AD6E9D10018C744 /* UserConfigTableViewController.swift in Sources */,
 				B9BD99001AD460C500689710 /* RemindWhere.xcdatamodeld in Sources */,
+				B909C6351AD5FDB1008682A2 /* NoteTableViewCell.swift in Sources */,
+				B9ECE80A1AD58F2800BB5EF3 /* NoteManager.swift in Sources */,
+				B9BD99241AD4BA5300689710 /* ListViewController.swift in Sources */,
+				B9BD99261AD4BBE500689710 /* MapViewController.swift in Sources */,
+				B9ECE80E1AD5954000BB5EF3 /* NewNoteViewController.swift in Sources */,
 				B9BD98FD1AD460C500689710 /* AppDelegate.swift in Sources */,
+				B9BD992A1AD4C25E00689710 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +487,7 @@
 				B9BD991B1AD460C500689710 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9BD991C1AD460C500689710 /* Build configuration list for PBXNativeTarget "RemindWhereTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +496,7 @@
 				B9BD991E1AD460C500689710 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
