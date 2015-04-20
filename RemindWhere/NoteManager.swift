@@ -24,6 +24,7 @@ class NoteManager: NSObject, CLLocationManagerDelegate {
     
     override init() {
         super.init()
+        /*
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedObjectContext: NSManagedObjectContext! = appDelegate.managedObjectContext
         var err: NSErrorPointer = nil
@@ -32,6 +33,7 @@ class NoteManager: NSObject, CLLocationManagerDelegate {
         
         
         noteList = NSMutableArray(array: managedObjectContext.executeFetchRequest(fetchRequest, error: err)!)
+        */
 
     }
     

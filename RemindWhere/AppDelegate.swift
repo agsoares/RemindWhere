@@ -8,6 +8,10 @@
 
 import UIKit
 import CoreData
+import Bolts
+import Parse
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,14 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
         
-        //rgba(41, 128, 185,1.0)
         
-        UITabBar.appearance().barTintColor = UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1)
-        UITabBar.appearance().tintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+        let barColor = UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1)
+        let tintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+
+        UITabBar.appearance().barTintColor = barColor
+        UITabBar.appearance().tintColor = tintColor
         
-        UINavigationBar.appearance().barTintColor = UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1)
+        UINavigationBar.appearance().barTintColor = barColor
         
         if (NSUserDefaults.standardUserDefaults().objectForKey("SendNotification") == nil) {
             NSUserDefaults.standardUserDefaults().setValue(false, forKey: "SendNotification")
@@ -34,7 +39,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSUserDefaults.standardUserDefaults().synchronize()
         }
         
-        return true
+        
+        // [Optional] Power your app with Local Datastore. For more info, go to
+        // https://parse.com/docs/ios_guide#localdatastore/iOS
+        Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("ngofgxJv469QuvvAj1UBohu52EGS955ziUAA6oei",
+            clientKey: "0E97D1CFucb0Uwbf9O2s8odj8SbrA6RayqcvCghp")
+        
+        // [Optional] Track statistics around application opens.
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        if let launchOptions = launchOptions {
+            PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+        } else {
+            PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(["":""])
+        }
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -53,14 +74,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        FBSDKAppEvents.activateApp()
     }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        self.saveContext()
+        //self.saveContext()
     }
 
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+    }
+    
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         
@@ -69,6 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - Core Data stack
 
+    /*
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.agsoares.RemindWhere" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
@@ -129,6 +156,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    */
 }
 

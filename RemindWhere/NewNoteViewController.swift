@@ -9,53 +9,71 @@
 import UIKit
 import CoreData
 
-class NewNoteViewController: UIViewController {
+class NewNoteViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
 
-    var noteManager: NoteManager = NoteManager.sharedInstance
-    var managedObjectContext: NSManagedObjectContext!
+    var dataManager: DataManager!
     
-    // Create the error pointer
-    var err: NSErrorPointer = nil
+    var placeHolder = "Placeholder Text"
+    
     
     @IBOutlet weak var noteTitle: UITextField!
     @IBOutlet weak var noteBody: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        managedObjectContext = appDelegate.managedObjectContext
         
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            self.dataManager = DataManager.sharedInstance
+        }
         
+        noteBody.text = placeHolder
+        noteBody.textColor = UIColor.lightGrayColor()
+        noteBody.delegate = self
     }
 
+    func textViewShouldBeginEditing(textView: UITextView) -> Bool {
+        noteBody.text = ""
+        noteBody.textColor = UIColor.blackColor()
+        return true
+    }
+    
+    func textViewShouldEndEditing(textView: UITextView) -> Bool {
+        if (noteBody.text.isEmpty) {
+            noteBody.text = placeHolder
+            noteBody.textColor = UIColor.lightGrayColor()
+        }
+        return true
+    }
+    
+    func textViewDidChange(textView: UITextView) {
+        if (noteBody.text.isEmpty) {
+            noteBody.text = placeHolder
+            noteBody.textColor = UIColor.lightGrayColor()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func save(sender: AnyObject) {
-        var newNote: Note = NSEntityDescription.insertNewObjectForEntityForName("Note",
-            inManagedObjectContext: managedObjectContext) as! Note
+        var newNote = PFObject(className:"Note")
+        newNote["title"] = noteTitle.text
+        newNote["body"] = noteBody.text
         
-        newNote.title = noteTitle.text
-        newNote.body = noteBody.text
-        newNote.longitude = 0
-        newNote.latitude = 0
-        managedObjectContext.save(err)
-        if(err == nil) {
-            noteManager.noteList.addObject(newNote)
+        var relation = newNote.relationForKey("user")
+        relation.addObject(PFUser.currentUser()!)
+
+        newNote.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                self.dataManager.noteList.addObject(newNote)
+                self.performSegueWithIdentifier("returnFromNewNote", sender: nil)
+            } else {
+                // There was a problem, check error.description
+            }
         }
-        performSegueWithIdentifier("returnFromNewNote", sender: nil)
-        
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -19,16 +19,16 @@ class MapPointViewController: UIViewController {
     
     var managedObjectContext: NSManagedObjectContext!
     
-    var note: Note!
+    var note: PFObject!
     
     @IBOutlet weak var map: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        /*
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         managedObjectContext = appDelegate.managedObjectContext
-        
+        */
         tapGestureRecognizer.addTarget(self, action: "tapped:")
         map.addGestureRecognizer(tapGestureRecognizer)
         noteManager = NoteManager.sharedInstance
@@ -39,10 +39,12 @@ class MapPointViewController: UIViewController {
         
         var span = MKCoordinateSpanMake(0.5, 0.5)
         var region: MKCoordinateRegion!
-        if (note.latitude != 0 && note.longitude != 0) {
+        if (note["coordinate"] != nil) {
             annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2DMake(note.latitude as CLLocationDegrees,
-                note.longitude as CLLocationDegrees)
+            var coordinate = note["coordinate"] as! PFGeoPoint
+            annotation.coordinate = CLLocationCoordinate2DMake(coordinate.latitude as CLLocationDegrees,
+                coordinate.longitude as CLLocationDegrees)
+            
             map.addAnnotation(annotation)
             region = MKCoordinateRegion(center: annotation.coordinate, span: span)
         } else {
@@ -75,25 +77,18 @@ class MapPointViewController: UIViewController {
     
     @IBAction func save(sender: AnyObject) {
         if (annotation != nil) {
-            note.latitude = annotation.coordinate.latitude
-            note.longitude = annotation.coordinate.longitude
-            
-            var err: NSErrorPointer = nil
-            managedObjectContext.save(err)
-            if(err != nil) {
-            }
-            performSegueWithIdentifier("returnFromMap", sender: nil)
+            var location = CLLocation(latitude: annotation.coordinate.latitude,
+                longitude: annotation.coordinate.longitude)
+            var coordinate = PFGeoPoint(location: location)
+            note["coordinate"] = coordinate
+            note.saveInBackgroundWithBlock({ (success, error) -> Void in
+                if (success) {
+                    self.performSegueWithIdentifier("returnFromMap", sender: nil)
+                } else {
+                    // There was a problem, check error.description
+                }
+            })
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -8,6 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		B909C6351AD5FDB1008682A2 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909C6341AD5FDB1008682A2 /* NoteTableViewCell.swift */; };
+		B95777D51AE476FE000146BF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777CF1AE476FE000146BF /* Bolts.framework */; };
+		B95777D61AE476FE000146BF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777D01AE476FE000146BF /* Parse.framework */; };
+		B95777D71AE476FE000146BF /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777D11AE476FE000146BF /* ParseCrashReporting.framework */; };
+		B95777D81AE476FE000146BF /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777D21AE476FE000146BF /* ParseFacebookUtils.framework */; };
+		B95777D91AE476FE000146BF /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777D31AE476FE000146BF /* ParseFacebookUtilsV4.framework */; };
+		B95777DA1AE476FE000146BF /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777D41AE476FE000146BF /* ParseUI.framework */; };
+		B95777DC1AE47717000146BF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777DB1AE47717000146BF /* AudioToolbox.framework */; };
+		B95777DE1AE47724000146BF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777DD1AE47724000146BF /* CFNetwork.framework */; };
+		B95777E01AE47732000146BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777DF1AE47732000146BF /* CoreGraphics.framework */; };
+		B95777E21AE47743000146BF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777E11AE47743000146BF /* MobileCoreServices.framework */; };
+		B95777E41AE4774C000146BF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777E31AE4774C000146BF /* QuartzCore.framework */; };
+		B95777E61AE47753000146BF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777E51AE47753000146BF /* Security.framework */; };
+		B95777E81AE4775E000146BF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777E71AE4775E000146BF /* StoreKit.framework */; };
+		B95777EA1AE4776B000146BF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777E91AE4776B000146BF /* SystemConfiguration.framework */; };
+		B95777EC1AE47778000146BF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777EB1AE47778000146BF /* libz.dylib */; };
+		B95777EE1AE47782000146BF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777ED1AE47782000146BF /* libsqlite3.dylib */; };
+		B95777F41AE47B36000146BF /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777EF1AE47B36000146BF /* FBAudienceNetwork.framework */; };
+		B95777F51AE47B36000146BF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777F01AE47B36000146BF /* FBSDKCoreKit.framework */; };
+		B95777F61AE47B36000146BF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777F11AE47B36000146BF /* FBSDKLoginKit.framework */; };
+		B95777F71AE47B36000146BF /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777F21AE47B36000146BF /* FBSDKMessengerShareKit.framework */; };
+		B95777F81AE47B36000146BF /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777F31AE47B36000146BF /* FBSDKShareKit.framework */; };
+		B95777FA1AE4825E000146BF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95777F91AE4825E000146BF /* DataManager.swift */; };
+		B95777FC1AE483ED000146BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95777FB1AE483ED000146BF /* LoginViewController.swift */; };
 		B994E1C21AD6E9D10018C744 /* UserConfigTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994E1C11AD6E9D10018C744 /* UserConfigTableViewController.swift */; };
 		B9BD98FD1AD460C500689710 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BD98FC1AD460C500689710 /* AppDelegate.swift */; };
 		B9BD99001AD460C500689710 /* RemindWhere.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9BD98FE1AD460C500689710 /* RemindWhere.xcdatamodeld */; };
@@ -37,6 +60,30 @@
 
 /* Begin PBXFileReference section */
 		B909C6341AD5FDB1008682A2 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		B95777CF1AE476FE000146BF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
+		B95777D01AE476FE000146BF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
+		B95777D11AE476FE000146BF /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = Frameworks/ParseCrashReporting.framework; sourceTree = "<group>"; };
+		B95777D21AE476FE000146BF /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = Frameworks/ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		B95777D31AE476FE000146BF /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = Frameworks/ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		B95777D41AE476FE000146BF /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Frameworks/ParseUI.framework; sourceTree = "<group>"; };
+		B95777DB1AE47717000146BF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B95777DD1AE47724000146BF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B95777DF1AE47732000146BF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B95777E11AE47743000146BF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		B95777E31AE4774C000146BF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B95777E51AE47753000146BF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B95777E71AE4775E000146BF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B95777E91AE4776B000146BF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B95777EB1AE47778000146BF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		B95777ED1AE47782000146BF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		B95777EF1AE47B36000146BF /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = Frameworks/FBAudienceNetwork.framework; sourceTree = "<group>"; };
+		B95777F01AE47B36000146BF /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Frameworks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		B95777F11AE47B36000146BF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Frameworks/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		B95777F21AE47B36000146BF /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKMessengerShareKit.framework; path = Frameworks/FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
+		B95777F31AE47B36000146BF /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Frameworks/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		B95777F91AE4825E000146BF /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		B95777FB1AE483ED000146BF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		B95777FD1AE4A527000146BF /* RemindWhere-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RemindWhere-Bridging-Header.h"; sourceTree = "<group>"; };
 		B994E1C11AD6E9D10018C744 /* UserConfigTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserConfigTableViewController.swift; sourceTree = "<group>"; };
 		B9BD98F71AD460C500689710 /* RemindWhere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindWhere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BD98FB1AD460C500689710 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,7 +110,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B95777EE1AE47782000146BF /* libsqlite3.dylib in Frameworks */,
+				B95777EC1AE47778000146BF /* libz.dylib in Frameworks */,
+				B95777EA1AE4776B000146BF /* SystemConfiguration.framework in Frameworks */,
+				B95777E81AE4775E000146BF /* StoreKit.framework in Frameworks */,
+				B95777E61AE47753000146BF /* Security.framework in Frameworks */,
+				B95777F51AE47B36000146BF /* FBSDKCoreKit.framework in Frameworks */,
+				B95777E41AE4774C000146BF /* QuartzCore.framework in Frameworks */,
+				B95777F81AE47B36000146BF /* FBSDKShareKit.framework in Frameworks */,
+				B95777F41AE47B36000146BF /* FBAudienceNetwork.framework in Frameworks */,
+				B95777E21AE47743000146BF /* MobileCoreServices.framework in Frameworks */,
+				B95777E01AE47732000146BF /* CoreGraphics.framework in Frameworks */,
+				B95777F71AE47B36000146BF /* FBSDKMessengerShareKit.framework in Frameworks */,
+				B95777DE1AE47724000146BF /* CFNetwork.framework in Frameworks */,
+				B95777F61AE47B36000146BF /* FBSDKLoginKit.framework in Frameworks */,
+				B95777DC1AE47717000146BF /* AudioToolbox.framework in Frameworks */,
+				B95777D51AE476FE000146BF /* Bolts.framework in Frameworks */,
+				B95777D71AE476FE000146BF /* ParseCrashReporting.framework in Frameworks */,
+				B95777D91AE476FE000146BF /* ParseFacebookUtilsV4.framework in Frameworks */,
+				B95777D81AE476FE000146BF /* ParseFacebookUtils.framework in Frameworks */,
 				B9BD99281AD4BCF200689710 /* MapKit.framework in Frameworks */,
+				B95777D61AE476FE000146BF /* Parse.framework in Frameworks */,
+				B95777DA1AE476FE000146BF /* ParseUI.framework in Frameworks */,
 				B9BD99221AD4639B00689710 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +182,7 @@
 		B9BD98FA1AD460C500689710 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B95777FD1AE4A527000146BF /* RemindWhere-Bridging-Header.h */,
 				B9BD98FB1AD460C500689710 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -139,6 +208,27 @@
 		B9BD99211AD4628900689710 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B95777EF1AE47B36000146BF /* FBAudienceNetwork.framework */,
+				B95777F01AE47B36000146BF /* FBSDKCoreKit.framework */,
+				B95777F11AE47B36000146BF /* FBSDKLoginKit.framework */,
+				B95777F21AE47B36000146BF /* FBSDKMessengerShareKit.framework */,
+				B95777F31AE47B36000146BF /* FBSDKShareKit.framework */,
+				B95777ED1AE47782000146BF /* libsqlite3.dylib */,
+				B95777EB1AE47778000146BF /* libz.dylib */,
+				B95777E91AE4776B000146BF /* SystemConfiguration.framework */,
+				B95777E71AE4775E000146BF /* StoreKit.framework */,
+				B95777E51AE47753000146BF /* Security.framework */,
+				B95777E31AE4774C000146BF /* QuartzCore.framework */,
+				B95777E11AE47743000146BF /* MobileCoreServices.framework */,
+				B95777DF1AE47732000146BF /* CoreGraphics.framework */,
+				B95777DD1AE47724000146BF /* CFNetwork.framework */,
+				B95777DB1AE47717000146BF /* AudioToolbox.framework */,
+				B95777CF1AE476FE000146BF /* Bolts.framework */,
+				B95777D01AE476FE000146BF /* Parse.framework */,
+				B95777D11AE476FE000146BF /* ParseCrashReporting.framework */,
+				B95777D21AE476FE000146BF /* ParseFacebookUtils.framework */,
+				B95777D31AE476FE000146BF /* ParseFacebookUtilsV4.framework */,
+				B95777D41AE476FE000146BF /* ParseUI.framework */,
 				B9BD99271AD4BCF200689710 /* MapKit.framework */,
 				B9BD991F1AD4627A00689710 /* CoreLocation.framework */,
 			);
@@ -172,6 +262,7 @@
 				B9ECE80D1AD5954000BB5EF3 /* NewNoteViewController.swift */,
 				B9ECE8131AD5B93B00BB5EF3 /* MapPointViewController.swift */,
 				B994E1C11AD6E9D10018C744 /* UserConfigTableViewController.swift */,
+				B95777FB1AE483ED000146BF /* LoginViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -180,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				B9ECE8091AD58F2800BB5EF3 /* NoteManager.swift */,
+				B95777F91AE4825E000146BF /* DataManager.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -233,6 +325,7 @@
 				TargetAttributes = {
 					B9BD98F61AD460C500689710 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = M7SM6673Q8;
 					};
 					B9BD990E1AD460C500689710 = {
 						CreatedOnToolsVersion = 6.2;
@@ -284,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B95777FC1AE483ED000146BF /* LoginViewController.swift in Sources */,
 				B9ECE8141AD5B93B00BB5EF3 /* MapPointViewController.swift in Sources */,
 				B994E1C21AD6E9D10018C744 /* UserConfigTableViewController.swift in Sources */,
 				B9BD99001AD460C500689710 /* RemindWhere.xcdatamodeld in Sources */,
@@ -292,6 +386,7 @@
 				B9BD99241AD4BA5300689710 /* ListViewController.swift in Sources */,
 				B9BD99261AD4BBE500689710 /* MapViewController.swift in Sources */,
 				B9ECE80E1AD5954000BB5EF3 /* NewNoteViewController.swift in Sources */,
+				B95777FA1AE4825E000146BF /* DataManager.swift in Sources */,
 				B9BD98FD1AD460C500689710 /* AppDelegate.swift in Sources */,
 				B9BD992A1AD4C25E00689710 /* Note.swift in Sources */,
 			);
@@ -418,9 +513,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = RemindWhere/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RemindWhere/RemindWhere-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -428,9 +531,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = RemindWhere/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RemindWhere/RemindWhere-Bridging-Header.h";
 			};
 			name = Release;
 		};

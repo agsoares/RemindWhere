@@ -12,10 +12,14 @@ class NoteTableViewCell: UITableViewCell {
 
     @IBOutlet weak var noteTitle: UITextField!
     @IBOutlet weak var noteBody: UITextView!
-    var note: Note!
+    var note: PFObject!    
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        noteTitle.backgroundColor = UIColor.clearColor()
+        noteBody.backgroundColor = UIColor.clearColor()
+        
+        
         // Initialization code
     }
 
