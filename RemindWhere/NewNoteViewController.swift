@@ -27,7 +27,7 @@ class NewNoteViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         }
         
         noteBody.text = placeHolder
-        noteBody.textColor = UIColor.lightGrayColor()
+        noteBody.textColor = UIColor.blackColor().colorWithAlphaComponent(0.25)
         noteBody.delegate = self
     }
 
@@ -40,7 +40,7 @@ class NewNoteViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     func textViewShouldEndEditing(textView: UITextView) -> Bool {
         if (noteBody.text.isEmpty) {
             noteBody.text = placeHolder
-            noteBody.textColor = UIColor.lightGrayColor()
+            noteBody.textColor = UIColor.blackColor().colorWithAlphaComponent(0.25)
         }
         return true
     }
@@ -48,7 +48,7 @@ class NewNoteViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     func textViewDidChange(textView: UITextView) {
         if (noteBody.text.isEmpty) {
             noteBody.text = placeHolder
-            noteBody.textColor = UIColor.lightGrayColor()
+            noteBody.textColor = UIColor.blackColor().colorWithAlphaComponent(0.25)
         }
     }
     

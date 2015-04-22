@@ -17,17 +17,24 @@ import FBSDKLoginKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    let barColor          = UIColor(red: 44/255,  green: 62/255,  blue: 80/255,  alpha: 1)
+    let tintColor         = UIColor(red: 236/255, green: 240/255, blue: 241/255, alpha: 1)
+    let selectedTintColor = UIColor(red: 39/255,  green: 174/255, blue: 96/255,  alpha: 1)
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        
-        let barColor = UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1)
-        let tintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
-
         UITabBar.appearance().barTintColor = barColor
-        UITabBar.appearance().tintColor = tintColor
+        UITabBar.appearance().tintColor = selectedTintColor
         
+        
+        var tabBar = UITabBar.appearance()
+        /*
+        for index in 0..<tabBar.items!.count {
+            var item = tabBar.items![index] as! UITabBarItem
+            item.image = item.selectedImage.imageWithColor(tintColor).imageWithRenderingMode(.AlwaysOriginal)
+        }
+        */
+        
+        UINavigationBar.appearance().tintColor = tintColor
         UINavigationBar.appearance().barTintColor = barColor
         
         if (NSUserDefaults.standardUserDefaults().objectForKey("SendNotification") == nil) {
@@ -38,15 +45,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSUserDefaults.standardUserDefaults().setValue(5.0, forKey: "AlertDistance")
             NSUserDefaults.standardUserDefaults().synchronize()
         }
-        
-        
-        // [Optional] Power your app with Local Datastore. For more info, go to
-        // https://parse.com/docs/ios_guide#localdatastore/iOS
+
         Parse.enableLocalDatastore()
         
-        // Initialize Parse.
-        Parse.setApplicationId("ngofgxJv469QuvvAj1UBohu52EGS955ziUAA6oei",
-            clientKey: "0E97D1CFucb0Uwbf9O2s8odj8SbrA6RayqcvCghp")
+        
+        if let keysFile = NSBundle.mainBundle().pathForResource("Keys", ofType: "plist") {
+            let keys = NSDictionary(contentsOfFile: keysFile)
+            let applicationId = keys?.objectForKey("parseApplicationId") as! String;
+            let clientKey = keys?.objectForKey("parseClientKey") as! String;
+            
+            Parse.setApplicationId (applicationId, clientKey: clientKey)
+        } else {
+            Parse.setApplicationId ("", clientKey: "")
+        }
+        
+        
+
         
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
@@ -79,8 +93,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        // Saves changes in the application's managed object context before the application terminates.
-        //self.saveContext()
     }
 
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {

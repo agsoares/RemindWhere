@@ -14,6 +14,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     var dataManager: DataManager!
     var locationManager: CLLocationManager!
+    var refreshControl: UIRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +23,14 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.dataManager = DataManager.sharedInstance
             dispatch_async(dispatch_get_main_queue()) {
                 self.dataManager.setupLocationManager()
-                self.tableView.reloadData()
+                self.refreshData()
+                
             }
         }
+        
+        refreshControl.addTarget(self, action: Selector("refreshData"), forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refreshControl)
+        refreshControl.beginRefreshing()
         
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "addLocation:",
@@ -36,8 +42,13 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
+        self.refreshData()
     
+    }
+    
+    func refreshData () {
+        self.tableView.reloadData()
+        refreshControl.endRefreshing()
     }
     
     func addLocation(sender: NSNotification?) {

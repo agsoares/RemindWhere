@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B909C6351AD5FDB1008682A2 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909C6341AD5FDB1008682A2 /* NoteTableViewCell.swift */; };
+		B955F9B91AE722E1008C5C12 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = B955F9B81AE722E1008C5C12 /* Keys.plist */; };
 		B95777D51AE476FE000146BF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777CF1AE476FE000146BF /* Bolts.framework */; };
 		B95777D61AE476FE000146BF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777D01AE476FE000146BF /* Parse.framework */; };
 		B95777D71AE476FE000146BF /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777D11AE476FE000146BF /* ParseCrashReporting.framework */; };
@@ -33,7 +34,6 @@
 		B95777FC1AE483ED000146BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95777FB1AE483ED000146BF /* LoginViewController.swift */; };
 		B994E1C21AD6E9D10018C744 /* UserConfigTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994E1C11AD6E9D10018C744 /* UserConfigTableViewController.swift */; };
 		B9BD98FD1AD460C500689710 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BD98FC1AD460C500689710 /* AppDelegate.swift */; };
-		B9BD99001AD460C500689710 /* RemindWhere.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9BD98FE1AD460C500689710 /* RemindWhere.xcdatamodeld */; };
 		B9BD99051AD460C500689710 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9BD99031AD460C500689710 /* Main.storyboard */; };
 		B9BD99071AD460C500689710 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9BD99061AD460C500689710 /* Images.xcassets */; };
 		B9BD990A1AD460C500689710 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9BD99081AD460C500689710 /* LaunchScreen.xib */; };
@@ -42,8 +42,7 @@
 		B9BD99241AD4BA5300689710 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BD99231AD4BA5300689710 /* ListViewController.swift */; };
 		B9BD99261AD4BBE500689710 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BD99251AD4BBE500689710 /* MapViewController.swift */; };
 		B9BD99281AD4BCF200689710 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BD99271AD4BCF200689710 /* MapKit.framework */; };
-		B9BD992A1AD4C25E00689710 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BD99291AD4C25E00689710 /* Note.swift */; };
-		B9ECE80A1AD58F2800BB5EF3 /* NoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECE8091AD58F2800BB5EF3 /* NoteManager.swift */; };
+		B9CB96C71AE6A3B700EBDB90 /* UIImage+ImageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CB96C61AE6A3B700EBDB90 /* UIImage+ImageColor.swift */; };
 		B9ECE80E1AD5954000BB5EF3 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECE80D1AD5954000BB5EF3 /* NewNoteViewController.swift */; };
 		B9ECE8141AD5B93B00BB5EF3 /* MapPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECE8131AD5B93B00BB5EF3 /* MapPointViewController.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		B909C6341AD5FDB1008682A2 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		B955F9B81AE722E1008C5C12 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		B95777CF1AE476FE000146BF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
 		B95777D01AE476FE000146BF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
 		B95777D11AE476FE000146BF /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = Frameworks/ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -88,7 +88,6 @@
 		B9BD98F71AD460C500689710 /* RemindWhere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindWhere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BD98FB1AD460C500689710 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9BD98FC1AD460C500689710 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B9BD98FF1AD460C500689710 /* RemindWhere.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemindWhere.xcdatamodel; sourceTree = "<group>"; };
 		B9BD99041AD460C500689710 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9BD99061AD460C500689710 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B9BD99091AD460C500689710 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -99,8 +98,8 @@
 		B9BD99231AD4BA5300689710 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		B9BD99251AD4BBE500689710 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B9BD99271AD4BCF200689710 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		B9BD99291AD4C25E00689710 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
-		B9ECE8091AD58F2800BB5EF3 /* NoteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteManager.swift; sourceTree = "<group>"; };
+		B9CB96C41AE6173F00EBDB90 /* TestLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestLocation.gpx; sourceTree = "<group>"; };
+		B9CB96C61AE6A3B700EBDB90 /* UIImage+ImageColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+ImageColor.swift"; path = "Extension/UIImage+ImageColor.swift"; sourceTree = "<group>"; };
 		B9ECE80D1AD5954000BB5EF3 /* NewNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
 		B9ECE8131AD5B93B00BB5EF3 /* MapPointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPointViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,10 +167,10 @@
 		B9BD98F91AD460C500689710 /* RemindWhere */ = {
 			isa = PBXGroup;
 			children = (
+				B9CB96C51AE6A35F00EBDB90 /* Extension */,
 				B9ECE8121AD5A57100BB5EF3 /* Helper */,
 				B9ECE8111AD5A56800BB5EF3 /* Controller */,
 				B9ECE8101AD5A56000BB5EF3 /* View */,
-				B9ECE80F1AD5A55900BB5EF3 /* Model */,
 				B9BD98FC1AD460C500689710 /* AppDelegate.swift */,
 				B9BD99061AD460C500689710 /* Images.xcassets */,
 				B9BD98FA1AD460C500689710 /* Supporting Files */,
@@ -184,6 +183,8 @@
 			children = (
 				B95777FD1AE4A527000146BF /* RemindWhere-Bridging-Header.h */,
 				B9BD98FB1AD460C500689710 /* Info.plist */,
+				B9CB96C41AE6173F00EBDB90 /* TestLocation.gpx */,
+				B955F9B81AE722E1008C5C12 /* Keys.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -235,13 +236,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B9ECE80F1AD5A55900BB5EF3 /* Model */ = {
+		B9CB96C51AE6A35F00EBDB90 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				B9BD98FE1AD460C500689710 /* RemindWhere.xcdatamodeld */,
-				B9BD99291AD4C25E00689710 /* Note.swift */,
+				B9CB96C61AE6A3B700EBDB90 /* UIImage+ImageColor.swift */,
 			);
-			name = Model;
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		B9ECE8101AD5A56000BB5EF3 /* View */ = {
@@ -270,7 +270,6 @@
 		B9ECE8121AD5A57100BB5EF3 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				B9ECE8091AD58F2800BB5EF3 /* NoteManager.swift */,
 				B95777F91AE4825E000146BF /* DataManager.swift */,
 			);
 			name = Helper;
@@ -357,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B955F9B91AE722E1008C5C12 /* Keys.plist in Resources */,
 				B9BD99051AD460C500689710 /* Main.storyboard in Resources */,
 				B9BD990A1AD460C500689710 /* LaunchScreen.xib in Resources */,
 				B9BD99071AD460C500689710 /* Images.xcassets in Resources */,
@@ -380,15 +380,13 @@
 				B95777FC1AE483ED000146BF /* LoginViewController.swift in Sources */,
 				B9ECE8141AD5B93B00BB5EF3 /* MapPointViewController.swift in Sources */,
 				B994E1C21AD6E9D10018C744 /* UserConfigTableViewController.swift in Sources */,
-				B9BD99001AD460C500689710 /* RemindWhere.xcdatamodeld in Sources */,
 				B909C6351AD5FDB1008682A2 /* NoteTableViewCell.swift in Sources */,
-				B9ECE80A1AD58F2800BB5EF3 /* NoteManager.swift in Sources */,
 				B9BD99241AD4BA5300689710 /* ListViewController.swift in Sources */,
 				B9BD99261AD4BBE500689710 /* MapViewController.swift in Sources */,
 				B9ECE80E1AD5954000BB5EF3 /* NewNoteViewController.swift in Sources */,
+				B9CB96C71AE6A3B700EBDB90 /* UIImage+ImageColor.swift in Sources */,
 				B95777FA1AE4825E000146BF /* DataManager.swift in Sources */,
 				B9BD98FD1AD460C500689710 /* AppDelegate.swift in Sources */,
-				B9BD992A1AD4C25E00689710 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,19 +607,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		B9BD98FE1AD460C500689710 /* RemindWhere.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B9BD98FF1AD460C500689710 /* RemindWhere.xcdatamodel */,
-			);
-			currentVersion = B9BD98FF1AD460C500689710 /* RemindWhere.xcdatamodel */;
-			path = RemindWhere.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = B9BD98EF1AD460C500689710 /* Project object */;
 }

@@ -11,30 +11,23 @@ import MapKit
 import CoreLocation
 import CoreData
 
-class MapPointViewController: UIViewController {
+class MapPointViewController: UIViewController, MKMapViewDelegate {
 
-    var noteManager: NoteManager!
+    var dataManager: DataManager!
     var tapGestureRecognizer = UITapGestureRecognizer()
     var annotation: MKPointAnnotation!
-    
-    var managedObjectContext: NSManagedObjectContext!
-    
     var note: PFObject!
     
     @IBOutlet weak var map: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        managedObjectContext = appDelegate.managedObjectContext
-        */
         tapGestureRecognizer.addTarget(self, action: "tapped:")
         map.addGestureRecognizer(tapGestureRecognizer)
-        noteManager = NoteManager.sharedInstance
+        dataManager = DataManager.sharedInstance
         var location = CLLocationCoordinate2D(
-            latitude: noteManager.locationManager.location.coordinate.latitude,
-            longitude: noteManager.locationManager.location.coordinate.longitude
+            latitude: dataManager.locationManager.location.coordinate.latitude,
+            longitude: dataManager.locationManager.location.coordinate.longitude
         )
         
         var span = MKCoordinateSpanMake(0.5, 0.5)
@@ -74,6 +67,7 @@ class MapPointViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     @IBAction func save(sender: AnyObject) {
         if (annotation != nil) {
