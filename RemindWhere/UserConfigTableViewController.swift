@@ -14,8 +14,6 @@ class UserConfigTableViewController: UITableViewController {
     @IBOutlet weak var distanceSlider: UISlider!
     @IBOutlet weak var distanceLabel: UILabel!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -40,9 +40,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="267" id="gtp-9F-9vQ"/>
                                                             </constraints>
-                                                            <state key="normal" title="Add Location Reminder" image="pin">
-                                                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                            </state>
+                                                            <state key="normal" title="Add Location Reminder" image="pin"/>
                                                             <connections>
                                                                 <action selector="addLocation:" destination="Em5-V8-IIq" eventType="touchUpInside" id="2z8-4C-L7d"/>
                                                             </connections>
@@ -64,7 +62,7 @@
                                                         <constraint firstItem="Ez1-1H-dCO" firstAttribute="leading" secondItem="8PS-ZI-BOX" secondAttribute="leading" constant="12" id="Mku-6q-u1v"/>
                                                         <constraint firstItem="Npk-nO-D9a" firstAttribute="top" secondItem="8PS-ZI-BOX" secondAttribute="top" constant="8" id="U86-NS-Vgi"/>
                                                         <constraint firstItem="q0K-PZ-lc0" firstAttribute="leading" secondItem="8PS-ZI-BOX" secondAttribute="leadingMargin" id="f4o-QK-SbI"/>
-                                                        <constraint firstAttribute="height" priority="750" constant="124" id="k9k-Rw-12F"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="124" id="k9k-Rw-12F"/>
                                                         <constraint firstAttribute="trailing" secondItem="Npk-nO-D9a" secondAttribute="trailing" constant="8" id="mbj-Gf-RfN"/>
                                                         <constraint firstItem="Npk-nO-D9a" firstAttribute="leading" secondItem="8PS-ZI-BOX" secondAttribute="leading" constant="12" id="r3A-Bt-4hn"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="124" id="tq2-Yr-nPG"/>
@@ -366,10 +364,10 @@
             </objects>
             <point key="canvasLocation" x="265" y="182"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar Controller-->
         <scene sceneID="L8c-1M-EI0">
             <objects>
-                <tabBarController storyboardIdentifier="tabBarController" automaticallyAdjustsScrollViewInsets="NO" id="6yh-8l-FOf" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" automaticallyAdjustsScrollViewInsets="NO" id="6yh-8l-FOf" customClass="CustomTabBarController" customModule="RemindWhere" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="BkE-Ki-ptq">

@@ -77,6 +77,10 @@ class MapPointViewController: UIViewController, MKMapViewDelegate {
             note["coordinate"] = coordinate
             note.saveInBackgroundWithBlock({ (success, error) -> Void in
                 if (success) {
+                    var radius = NSUserDefaults.standardUserDefaults().valueForKey("AlertDistance") as! Double
+                    var center = CLLocationCoordinate2DMake(coordinate.latitude, coordinate.longitude)
+                    var region = CLCircularRegion(center: center, radius: radius*1000, identifier: self.note["title"] as! String)
+                    self.dataManager.locationManager.startMonitoringForRegion(region)
                     self.performSegueWithIdentifier("returnFromMap", sender: nil)
                 } else {
                     // There was a problem, check error.description

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B909C6351AD5FDB1008682A2 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909C6341AD5FDB1008682A2 /* NoteTableViewCell.swift */; };
 		B955F9B91AE722E1008C5C12 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = B955F9B81AE722E1008C5C12 /* Keys.plist */; };
+		B955F9BB1AE72B1B008C5C12 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B955F9BA1AE72B1B008C5C12 /* CustomTabBarController.swift */; };
 		B95777D51AE476FE000146BF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777CF1AE476FE000146BF /* Bolts.framework */; };
 		B95777D61AE476FE000146BF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777D01AE476FE000146BF /* Parse.framework */; };
 		B95777D71AE476FE000146BF /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777D11AE476FE000146BF /* ParseCrashReporting.framework */; };
@@ -60,6 +61,7 @@
 /* Begin PBXFileReference section */
 		B909C6341AD5FDB1008682A2 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		B955F9B81AE722E1008C5C12 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		B955F9BA1AE72B1B008C5C12 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTabBarController.swift; path = Controllers/CustomTabBarController.swift; sourceTree = "<group>"; };
 		B95777CF1AE476FE000146BF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
 		B95777D01AE476FE000146BF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
 		B95777D11AE476FE000146BF /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = Frameworks/ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				B9ECE8131AD5B93B00BB5EF3 /* MapPointViewController.swift */,
 				B994E1C11AD6E9D10018C744 /* UserConfigTableViewController.swift */,
 				B95777FB1AE483ED000146BF /* LoginViewController.swift */,
+				B955F9BA1AE72B1B008C5C12 /* CustomTabBarController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				B994E1C21AD6E9D10018C744 /* UserConfigTableViewController.swift in Sources */,
 				B909C6351AD5FDB1008682A2 /* NoteTableViewCell.swift in Sources */,
 				B9BD99241AD4BA5300689710 /* ListViewController.swift in Sources */,
+				B955F9BB1AE72B1B008C5C12 /* CustomTabBarController.swift in Sources */,
 				B9BD99261AD4BBE500689710 /* MapViewController.swift in Sources */,
 				B9ECE80E1AD5954000BB5EF3 /* NewNoteViewController.swift in Sources */,
 				B9CB96C71AE6A3B700EBDB90 /* UIImage+ImageColor.swift in Sources */,
