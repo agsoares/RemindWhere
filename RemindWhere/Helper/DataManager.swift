@@ -24,7 +24,7 @@ class DataManager: NSObject, CLLocationManagerDelegate {
     func setupLocationManager () {
         self.locationManager = CLLocationManager()
         self.locationManager.delegate = self
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         
         if CLLocationManager.authorizationStatus() == .NotDetermined {
             self.locationManager.requestAlwaysAuthorization()
@@ -60,6 +60,11 @@ class DataManager: NSObject, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager!, didStartMonitoringForRegion region: CLRegion!) {
         println("StartLookingForRegion")
+        var circularRegion = region as! CLCircularRegion
+        if (circularRegion.containsCoordinate(locationManager.location.coordinate)) {
+            println("TEM")
+        }
+        
     }
     
     

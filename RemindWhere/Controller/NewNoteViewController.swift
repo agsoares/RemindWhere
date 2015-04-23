@@ -14,7 +14,10 @@ class NewNoteViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     var dataManager: DataManager!
     
     var placeHolder = "Placeholder Text"
-    
+    var noteColor = (UIApplication.sharedApplication().delegate as! AppDelegate).noteColors[1] as UIColor
+    var placeHolderColor = UIColor.blackColor().colorWithAlphaComponent(0.25)
+    var fontColor = (UIApplication.sharedApplication().delegate as! AppDelegate).textColor
+  
     
     @IBOutlet weak var noteTitle: UITextField!
     @IBOutlet weak var noteBody: UITextView!
@@ -25,22 +28,29 @@ class NewNoteViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
             self.dataManager = DataManager.sharedInstance
         }
-        
+      
+        self.view.backgroundColor = noteColor
+      
+        noteTitle.backgroundColor = UIColor.clearColor()
+        noteBody.backgroundColor  = UIColor.clearColor()
+      
+        noteTitle.textColor = fontColor
+      
         noteBody.text = placeHolder
-        noteBody.textColor = UIColor.blackColor().colorWithAlphaComponent(0.25)
+        noteBody.textColor = placeHolderColor
         noteBody.delegate = self
     }
 
     func textViewShouldBeginEditing(textView: UITextView) -> Bool {
         noteBody.text = ""
-        noteBody.textColor = UIColor.blackColor()
+        noteBody.textColor = fontColor
         return true
     }
     
     func textViewShouldEndEditing(textView: UITextView) -> Bool {
         if (noteBody.text.isEmpty) {
             noteBody.text = placeHolder
-            noteBody.textColor = UIColor.blackColor().colorWithAlphaComponent(0.25)
+            noteBody.textColor = placeHolderColor
         }
         return true
     }
@@ -48,7 +58,7 @@ class NewNoteViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     func textViewDidChange(textView: UITextView) {
         if (noteBody.text.isEmpty) {
             noteBody.text = placeHolder
-            noteBody.textColor = UIColor.blackColor().colorWithAlphaComponent(0.25)
+            noteBody.textColor = placeHolderColor
         }
     }
     
@@ -60,7 +70,8 @@ class NewNoteViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     @IBAction func save(sender: AnyObject) {
         var newNote = PFObject(className:"Note")
         newNote["title"] = noteTitle.text
-        newNote["body"] = noteBody.text
+        newNote["body"]  = noteBody.text
+        newNote["color"] = noteColor.toString()
         
         var relation = newNote.relationForKey("user")
         relation.addObject(PFUser.currentUser()!)

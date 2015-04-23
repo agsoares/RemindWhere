@@ -79,7 +79,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="noteBody" destination="q0K-PZ-lc0" id="xq3-cP-siw"/>
+                                            <outlet property="noteButton" destination="Ez1-1H-dCO" id="F04-kd-8Ci"/>
                                             <outlet property="noteTitle" destination="Npk-nO-D9a" id="DAM-Tv-Zui"/>
+                                            <outlet property="noteView" destination="8PS-ZI-BOX" id="jaz-Wu-S9e"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -118,7 +120,7 @@
             </objects>
             <point key="canvasLocation" x="1668" y="926"/>
         </scene>
-        <!--Title-->
+        <!--New Note-->
         <scene sceneID="vab-Wd-xdt">
             <objects>
                 <viewController id="SyY-4o-B6J" customClass="NewNoteViewController" customModule="RemindWhere" customModuleProvider="target" sceneMemberID="viewController">
@@ -159,7 +161,7 @@
                             <constraint firstItem="9Hj-KU-COB" firstAttribute="leading" secondItem="hgb-kH-bjy" secondAttribute="leadingMargin" id="yEk-Fr-ZC0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="mh4-1t-vJY">
+                    <navigationItem key="navigationItem" title="New Note" id="mh4-1t-vJY">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="2dS-xb-1FG">
                             <connections>
                                 <action selector="save:" destination="SyY-4o-B6J" id="LoX-cn-SHq"/>
@@ -237,7 +239,7 @@
             </objects>
             <point key="canvasLocation" x="952" y="926"/>
         </scene>
-        <!--Title-->
+        <!--User Configuration-->
         <scene sceneID="hwe-db-Qfp">
             <objects>
                 <tableViewController id="teh-Fh-GI4" customClass="UserConfigTableViewController" customModule="RemindWhere" customModuleProvider="target" sceneMemberID="viewController">
@@ -323,7 +325,7 @@
                             <outlet property="delegate" destination="teh-Fh-GI4" id="NBg-SV-fHg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="xc0-Ik-xJd">
+                    <navigationItem key="navigationItem" title="User Configuration" id="xc0-Ik-xJd">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="qEB-aL-X14">
                             <connections>
                                 <action selector="save:" destination="teh-Fh-GI4" id="x9y-K2-B0b"/>

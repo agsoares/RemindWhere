@@ -12,14 +12,23 @@ class NoteTableViewCell: UITableViewCell {
 
     @IBOutlet weak var noteTitle: UITextField!
     @IBOutlet weak var noteBody: UITextView!
-    var note: PFObject!    
+    @IBOutlet weak var noteButton: UIButton!
+    @IBOutlet weak var noteView: UIView!
+  
+  
+  
+    var note: PFObject!
+    var fontColor = (UIApplication.sharedApplication().delegate as! AppDelegate).textColor
     
     override func awakeFromNib() {
         super.awakeFromNib()
         noteTitle.backgroundColor = UIColor.clearColor()
-        noteBody.backgroundColor = UIColor.clearColor()
+        noteBody.backgroundColor  = UIColor.clearColor()
         
-        
+        noteTitle.textColor = fontColor
+        noteBody.textColor  = fontColor
+        //noteButton.imageView?.image = noteButton.imageView?.image?.imageWithColor(fontColor)
+        noteButton.tintColor = fontColor
         // Initialization code
     }
 

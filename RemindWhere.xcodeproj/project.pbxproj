@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B909C6351AD5FDB1008682A2 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909C6341AD5FDB1008682A2 /* NoteTableViewCell.swift */; };
+		B934AB8D1AE868F8002ADA50 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934AB8C1AE868F8002ADA50 /* UIColor+Extension.swift */; };
 		B955F9B91AE722E1008C5C12 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = B955F9B81AE722E1008C5C12 /* Keys.plist */; };
 		B955F9BB1AE72B1B008C5C12 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B955F9BA1AE72B1B008C5C12 /* CustomTabBarController.swift */; };
 		B95777D51AE476FE000146BF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95777CF1AE476FE000146BF /* Bolts.framework */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		B909C6341AD5FDB1008682A2 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		B934AB8C1AE868F8002ADA50 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B955F9B81AE722E1008C5C12 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		B955F9BA1AE72B1B008C5C12 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		B95777CF1AE476FE000146BF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
@@ -155,7 +157,9 @@
 				B9BD99121AD460C500689710 /* RemindWhereTests */,
 				B9BD98F81AD460C500689710 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		B9BD98F81AD460C500689710 /* Products */ = {
 			isa = PBXGroup;
@@ -242,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				B9CB96C61AE6A3B700EBDB90 /* UIImage+ImageColor.swift */,
+				B934AB8C1AE868F8002ADA50 /* UIColor+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -383,6 +388,7 @@
 				B95777FC1AE483ED000146BF /* LoginViewController.swift in Sources */,
 				B9ECE8141AD5B93B00BB5EF3 /* MapPointViewController.swift in Sources */,
 				B994E1C21AD6E9D10018C744 /* UserConfigTableViewController.swift in Sources */,
+				B934AB8D1AE868F8002ADA50 /* UIColor+Extension.swift in Sources */,
 				B909C6351AD5FDB1008682A2 /* NoteTableViewCell.swift in Sources */,
 				B9BD99241AD4BA5300689710 /* ListViewController.swift in Sources */,
 				B955F9BB1AE72B1B008C5C12 /* CustomTabBarController.swift in Sources */,
