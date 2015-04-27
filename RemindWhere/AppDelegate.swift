@@ -42,6 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       navigationItem.titleView?.tintColor = tintColor
     }
     
+    application.setStatusBarStyle(.LightContent, animated: true)
+    
     UINavigationBar.appearance().barTintColor = UIColor.colorWithString(colorString)
     UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:tintColor]
     

@@ -47,6 +47,7 @@
 		B9CB96C71AE6A3B700EBDB90 /* UIImage+ImageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CB96C61AE6A3B700EBDB90 /* UIImage+ImageColor.swift */; };
 		B9ECE80E1AD5954000BB5EF3 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECE80D1AD5954000BB5EF3 /* NewNoteViewController.swift */; };
 		B9ECE8141AD5B93B00BB5EF3 /* MapPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECE8131AD5B93B00BB5EF3 /* MapPointViewController.swift */; };
+		B9F56D4C1AEEAA3C005EB705 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9F56D4E1AEEAA3C005EB705 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,9 @@
 		B9CB96C61AE6A3B700EBDB90 /* UIImage+ImageColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ImageColor.swift"; sourceTree = "<group>"; };
 		B9ECE80D1AD5954000BB5EF3 /* NewNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
 		B9ECE8131AD5B93B00BB5EF3 /* MapPointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPointViewController.swift; sourceTree = "<group>"; };
+		B9F56D4B1AEEA9CF005EB705 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		B9F56D4D1AEEAA3C005EB705 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9F56D4F1AEEAA3F005EB705 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,7 @@
 				B9BD98FB1AD460C500689710 /* Info.plist */,
 				B9CB96C41AE6173F00EBDB90 /* TestLocation.gpx */,
 				B955F9B81AE722E1008C5C12 /* Keys.plist */,
+				B9F56D4E1AEEAA3C005EB705 /* Localizable.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -347,6 +352,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pt,
 			);
 			mainGroup = B9BD98EE1AD460C500689710;
 			productRefGroup = B9BD98F81AD460C500689710 /* Products */;
@@ -364,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9F56D4C1AEEAA3C005EB705 /* Localizable.strings in Resources */,
 				B955F9B91AE722E1008C5C12 /* Keys.plist in Resources */,
 				B9BD99051AD460C500689710 /* Main.storyboard in Resources */,
 				B9BD990A1AD460C500689710 /* LaunchScreen.xib in Resources */,
@@ -432,9 +439,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				B9BD99091AD460C500689710 /* Base */,
+				B9F56D4B1AEEA9CF005EB705 /* pt */,
 			);
 			name = LaunchScreen.xib;
 			path = .;
+			sourceTree = "<group>";
+		};
+		B9F56D4E1AEEAA3C005EB705 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9F56D4D1AEEAA3C005EB705 /* en */,
+				B9F56D4F1AEEAA3F005EB705 /* pt */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

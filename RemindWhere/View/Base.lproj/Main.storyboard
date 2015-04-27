@@ -186,6 +186,7 @@
                     <connections>
                         <outlet property="noteBody" destination="9Hj-KU-COB" id="CcA-Tj-cMI"/>
                         <outlet property="noteTitle" destination="kTH-hQ-qJx" id="hCM-h7-bRW"/>
+                        <outlet property="titleBar" destination="mh4-1t-vJY" id="PHW-eG-CSt"/>
                         <segue destination="gNT-wZ-yeE" kind="unwind" identifier="returnFromNewNote" unwindAction="returnToList:" id="xrR-1t-bL2"/>
                     </connections>
                 </viewController>
@@ -350,7 +351,9 @@
                     <connections>
                         <outlet property="distanceLabel" destination="sGr-7a-x7n" id="Y1b-xA-Drp"/>
                         <outlet property="distanceSlider" destination="bw8-WM-UnZ" id="VjD-9L-zmH"/>
+                        <outlet property="notificationSection" destination="zHL-KC-hq7" id="uZe-oL-TkF"/>
                         <outlet property="notificationSwitch" destination="hun-Y3-ZJ2" id="lQo-Jc-Iiw"/>
+                        <outlet property="titleBar" destination="xc0-Ik-xJd" id="7Uo-SQ-4Ja"/>
                         <segue destination="gco-Yu-tJa" kind="unwind" identifier="returnFromConfig" unwindAction="returnToList:" id="2Yn-jA-5ta"/>
                         <segue destination="gco-Yu-tJa" kind="unwind" identifier="logoutSegue" unwindAction="logoutSegue:" id="FBu-mo-HPy"/>
                     </connections>

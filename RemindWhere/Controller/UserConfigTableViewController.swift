@@ -15,14 +15,20 @@ class UserConfigTableViewController: UITableViewController, FBSDKLoginButtonDele
   @IBOutlet weak var distanceSlider: UISlider!
   @IBOutlet weak var distanceLabel: UILabel!
   
+  @IBOutlet weak var titleBar: UINavigationItem!
   var backgroundColor = (UIApplication.sharedApplication().delegate as! AppDelegate).backgroundColor
   var selectedTintColor = (UIApplication.sharedApplication().delegate as! AppDelegate).selectedTintColor
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.backgroundColor = backgroundColor
     notificationSwitch.onTintColor = selectedTintColor
     distanceSlider.minimumTrackTintColor = selectedTintColor
+    
+    tableView.allowsSelection = false
+    
+    titleBar.title = NSBundle.mainBundle().localizedStringForKey("User Configuration", value: "", table: nil)
+    
     
     var loginButton = FBSDKLoginButton()
     loginButton.delegate = self

@@ -18,6 +18,7 @@ class NewNoteViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     var placeHolderColor = UIColor.blackColor().colorWithAlphaComponent(0.25)
     var fontColor = (UIApplication.sharedApplication().delegate as! AppDelegate).textColor
   
+    @IBOutlet weak var titleBar: UINavigationItem!
     
     @IBOutlet weak var noteTitle: UITextField!
     @IBOutlet weak var noteBody: UITextView!
@@ -29,12 +30,16 @@ class NewNoteViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             self.dataManager = DataManager.sharedInstance
         }
       
+      
+      
         self.view.backgroundColor = noteColor
       
         noteTitle.backgroundColor = UIColor.clearColor()
         noteBody.backgroundColor  = UIColor.clearColor()
       
         noteTitle.textColor = fontColor
+      
+        titleBar.title = NSBundle.mainBundle().localizedStringForKey("New Note", value: "", table: nil)
       
         noteBody.text = placeHolder
         noteBody.textColor = placeHolderColor
