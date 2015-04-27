@@ -34,11 +34,15 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
       }
     }
     tableView.backgroundColor = backgroundColor
-
     
     NSNotificationCenter.defaultCenter().addObserver(self,
       selector: "addLocation:",
       name: "addLocationNotification",
+      object: nil)
+    
+    NSNotificationCenter.defaultCenter().addObserver(self,
+      selector: "removeNote:",
+      name: "removeNote",
       object: nil)
     
     // Do any additional setup after loading the view.
@@ -82,6 +86,13 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     return 0
   }
   
+  
+  func removeNote(sender: NSNotification?) {
+    var note: PFObject = sender?.object as! PFObject
+    dataManager.removeNote(note)
+    dataManager.noteList.removeObject(note)
+    refreshData()
+  }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()

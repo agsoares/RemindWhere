@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
-class UserConfigTableViewController: UITableViewController {
+class UserConfigTableViewController: UITableViewController, FBSDKLoginButtonDelegate {
   
   @IBOutlet weak var notificationSwitch: UISwitch!
   @IBOutlet weak var distanceSlider: UISlider!
@@ -22,7 +23,27 @@ class UserConfigTableViewController: UITableViewController {
     tableView.backgroundColor = backgroundColor
     notificationSwitch.onTintColor = selectedTintColor
     distanceSlider.minimumTrackTintColor = selectedTintColor
+    
+    var loginButton = FBSDKLoginButton()
+    loginButton.delegate = self
+    loginButton.frame = CGRectMake(self.view.frame.width*0.2,
+      (self.view.frame.height*0.75)-40,
+      self.view.frame.width*0.6, 40)
+    self.view.addSubview(loginButton)
+    
   }
+  
+  
+  func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+
+  }
+  
+  func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+    PFUser.logOutInBackgroundWithBlock { (error) -> Void in
+      self.performSegueWithIdentifier("logoutSegue", sender: nil)
+    }
+  }
+  
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()

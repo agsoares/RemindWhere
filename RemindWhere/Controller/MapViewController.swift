@@ -32,15 +32,15 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
     dispatch_async(dispatch_get_global_queue(priority, 0)) {
       self.dataManager = DataManager.sharedInstance
-      var location: CLLocationCoordinate2D!
+      var location = CLLocationCoordinate2D(latitude: 0, longitude: 0)
       
       if let locationManager = self.dataManager.locationManager {
-        location = CLLocationCoordinate2D(
-          latitude: locationManager.location.coordinate.latitude,
-          longitude: locationManager.location.coordinate.longitude
-        )
-      } else {
-        location = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+        if let userLocation = locationManager.location {
+          location = CLLocationCoordinate2D(
+            latitude: userLocation.coordinate.latitude,
+            longitude: userLocation.coordinate.longitude
+          )
+        }
       }
       
       var span = MKCoordinateSpanMake(0.5, 0.5)

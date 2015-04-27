@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   let tintColor         = UIColor(red: 236/255, green: 240/255, blue: 241/255, alpha: 1) //
   let selectedTintColor = UIColor(red: 39/255,  green: 174/255, blue: 96/255,  alpha: 1) //
   let backgroundColor   = UIColor(red: 236/255, green: 240/255, blue: 241/255, alpha: 1) //
-  let textColor         = UIColor(red: 44/255,  green: 62/255,  blue: 80/255,  alpha: 1) //
+  let textColor         = UIColor(red: 236/255, green: 240/255, blue: 241/255, alpha: 1) //
   let noteColors        = [
     UIColor(red: 22/255,  green: 160/255, blue: 133/255, alpha: 1), //rgb(22, 160, 133) //Green Sea
     UIColor(red: 41/255,  green: 128/255, blue: 185/255, alpha: 1), //rgb(41, 128, 185) //Belize Hole
@@ -43,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     UINavigationBar.appearance().barTintColor = UIColor.colorWithString(colorString)
+    UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:tintColor]
     
     if (NSUserDefaults.standardUserDefaults().objectForKey("SendNotification") == nil) {
       NSUserDefaults.standardUserDefaults().setValue(false, forKey: "SendNotification")
@@ -108,7 +109,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   
   func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
-    
+    var appState = application.applicationState
+    if (appState == .Active) {
+      var alert = UIAlertView(title: notification.alertTitle, message: notification.alertBody, delegate: nil, cancelButtonTitle: "OK")
+      alert.show()
+    }
   }
 }
 

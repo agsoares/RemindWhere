@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yOu-BL-Eu2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -53,15 +54,28 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vie-Uj-06X">
+                                                            <rect key="frame" x="556" y="13" width="20" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="Vie-Uj-06X" secondAttribute="height" multiplier="1:1" id="J1f-Mb-hDA"/>
+                                                                <constraint firstAttribute="width" constant="20" id="ypc-LB-H1b"/>
+                                                            </constraints>
+                                                            <state key="normal" image="close"/>
+                                                            <connections>
+                                                                <action selector="deleteNote:" destination="Em5-V8-IIq" eventType="touchUpInside" id="rYN-tc-sJw"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.08235294118" green="0.69803921570000005" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="q0K-PZ-lc0" firstAttribute="trailing" secondItem="Npk-nO-D9a" secondAttribute="trailing" id="1O8-PE-vgV"/>
                                                         <constraint firstAttribute="bottom" secondItem="q0K-PZ-lc0" secondAttribute="bottom" constant="47" id="25N-Yj-zpj"/>
                                                         <constraint firstItem="q0K-PZ-lc0" firstAttribute="top" secondItem="Npk-nO-D9a" secondAttribute="bottom" constant="14" id="KQV-uR-vrG"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Vie-Uj-06X" secondAttribute="trailing" constant="8" id="MJi-9G-cMV"/>
                                                         <constraint firstItem="Ez1-1H-dCO" firstAttribute="leading" secondItem="8PS-ZI-BOX" secondAttribute="leading" constant="12" id="Mku-6q-u1v"/>
                                                         <constraint firstItem="Npk-nO-D9a" firstAttribute="top" secondItem="8PS-ZI-BOX" secondAttribute="top" constant="8" id="U86-NS-Vgi"/>
                                                         <constraint firstItem="q0K-PZ-lc0" firstAttribute="leading" secondItem="8PS-ZI-BOX" secondAttribute="leadingMargin" id="f4o-QK-SbI"/>
+                                                        <constraint firstItem="Vie-Uj-06X" firstAttribute="top" secondItem="8PS-ZI-BOX" secondAttribute="top" constant="13" id="ir1-hu-rLk"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="124" id="k9k-Rw-12F"/>
                                                         <constraint firstAttribute="trailing" secondItem="Npk-nO-D9a" secondAttribute="trailing" constant="8" id="mbj-Gf-RfN"/>
                                                         <constraint firstItem="Npk-nO-D9a" firstAttribute="leading" secondItem="8PS-ZI-BOX" secondAttribute="leading" constant="12" id="r3A-Bt-4hn"/>
@@ -78,6 +92,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="closeButton" destination="Vie-Uj-06X" id="iNy-WO-irX"/>
                                             <outlet property="noteBody" destination="q0K-PZ-lc0" id="xq3-cP-siw"/>
                                             <outlet property="noteButton" destination="Ez1-1H-dCO" id="F04-kd-8Ci"/>
                                             <outlet property="noteTitle" destination="Npk-nO-D9a" id="DAM-Tv-Zui"/>
@@ -337,6 +352,7 @@
                         <outlet property="distanceSlider" destination="bw8-WM-UnZ" id="VjD-9L-zmH"/>
                         <outlet property="notificationSwitch" destination="hun-Y3-ZJ2" id="lQo-Jc-Iiw"/>
                         <segue destination="gco-Yu-tJa" kind="unwind" identifier="returnFromConfig" unwindAction="returnToList:" id="2Yn-jA-5ta"/>
+                        <segue destination="gco-Yu-tJa" kind="unwind" identifier="logoutSegue" unwindAction="logoutSegue:" id="FBu-mo-HPy"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8LQ-gc-OHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -420,6 +436,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="close" width="32" height="32"/>
         <image name="gear" width="24" height="24"/>
         <image name="note" width="24" height="24"/>
         <image name="pin" width="24" height="24"/>

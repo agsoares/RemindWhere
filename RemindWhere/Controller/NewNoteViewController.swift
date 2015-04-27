@@ -13,8 +13,8 @@ class NewNoteViewController: UIViewController, UITextFieldDelegate, UITextViewDe
 
     var dataManager: DataManager!
     
-    var placeHolder = "Placeholder Text"
-    var noteColor = (UIApplication.sharedApplication().delegate as! AppDelegate).noteColors[1] as UIColor
+    var placeHolder = "Note Text"
+    var noteColor = (UIApplication.sharedApplication().delegate as! AppDelegate).noteColors[0] as UIColor
     var placeHolderColor = UIColor.blackColor().colorWithAlphaComponent(0.25)
     var fontColor = (UIApplication.sharedApplication().delegate as! AppDelegate).textColor
   
@@ -54,14 +54,7 @@ class NewNoteViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         }
         return true
     }
-    
-    func textViewDidChange(textView: UITextView) {
-        if (noteBody.text.isEmpty) {
-            noteBody.text = placeHolder
-            noteBody.textColor = placeHolderColor
-        }
-    }
-    
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
